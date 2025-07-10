@@ -12,4 +12,13 @@ router.post('/register', [
     userController.registerUser
 )
 
+router.post('/login', [
+    body('email').isEmail().withMessage('Invalid email'),
+    body('password').isLength({min:4}).withMessage('Invalid password')
+],
+    userController.loginUser
+)
+
+router.get('/profile', userController.getUserProfile)
+
 module.exports = router;
