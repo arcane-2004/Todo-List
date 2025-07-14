@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.scrollbar-fade-thumb::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-fade-thumb::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-fade-thumb::-webkit-scrollbar-thumb {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.scrollbar-fade-thumb:hover::-webkit-scrollbar-thumb {
+  background: rgba(186, 189, 193, 0.968);
+  border-radius: 4px;
+}

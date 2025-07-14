@@ -7,6 +7,7 @@ const cors = require('cors')
 const connectToDb = require('./db/db')
 
 const userRoutes = require('./routes/user.route')
+const todosRoutes = require('./routes/todos.route')
 
 connectToDb();
 
@@ -21,5 +22,7 @@ app.get("/", (req, res)=>{
 })
 
 app.use('/user', userRoutes);
+
+app.use('/todo', todosRoutes);
 
 module.exports = app;
